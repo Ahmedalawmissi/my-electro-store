@@ -1,1 +1,392 @@
 
+/* إعدادات عامة */
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    direction: rtl;
+    text-align: right;
+}
+
+/* شريط التنقل العام */
+.navbar {
+    position: absolute;
+    top: 20px;
+
+    right: 30px;
+    z-index: 1000;
+
+    background-color: rgb(255, 3, 171);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #ffb400;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* أزرار */
+.btn {
+    background-color: #ffb400;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #e0a800;
+}
+
+/* رأس الصفحة - الهيدر */
+.hero {
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.fancy-hero {
+    background: linear-gradient(to right, rgba(0, 77, 122, 0.9), rgba(0, 40, 60, 0.9)), url('../images/hero-bg.jpg') center center/cover no-repeat;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+
+.highlight {
+    color: #ffb400;
+}
+
+/* زر متحرك */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* الأقسام */
+.section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #004d7a;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+/* لماذا تختارني */
+.why-me ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-me li {
+    margin: 15px 0;
+    font-size: 1.2em;
+    padding-left: 25px;
+    position: relative;
+}
+
+.why-me li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* بطاقات التنقل في الصفحة الرئيسية */
+.cards-section .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.mini-card {
+    background-color: #f1f1f1;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.mini-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mini-card img {
+    width: 60px;
+    margin-bottom: 18px;
+}
+
+.mini-card h3 {
+    margin-bottom: 12px;
+    color: #004d7a;
+    font-size: 1.4em;
+}
+
+.mini-card p {
+    color: #555;
+    font-size: 1em;
+}
+
+/* صفحة "من أنا" */
+.about-section .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.about-section div {
+    max-width: 600px;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    color: #004d7a;
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* بطاقات المشاريع */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 320px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 15px 15px 10px;
+    color: #004d7a;
+}
+
+.project-card p {
+    margin: 0 15px 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* صفحة التواصل */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.contact-info,
+.contact-form-container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 450px;
+    flex: 1 1 300px;
+}
+
+.contact-info h2,
+.contact-form-container h2 {
+    color: #004d7a;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.contact-links li {
+    margin: 14px 0;
+    font-size: 1.2em;
+}
+
+.contact-links a {
+    background-color: #004d7a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.contact-links a:hover {
+    background-color: #006fa1;
+}
+
+/* نموذج التواصل */
+form label {
+    display: block;
+    margin-top: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+form button.btn {
+    margin-top: 25px;
+    width: 100%;
+    background-color: #ffb400;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+form button.btn:hover {
+    background-color: #e0a800;
+}
+
+/* زر العودة */
+.back-btn {
+    display: inline-block;
+    margin-top: 35px;
+    background-color: #004d7a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.back-btn:hover {
+    background-color: #006fa1;
+}
+
+/* الهيدرات الخاصة */
+.about-hero,
+.projects-hero,
+.contact-hero {
+    background: linear-gradient(to right, rgba(0, 77, 122, 0.85), rgba(0, 40, 60, 0.85)), url('../images/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-hero .overlay,
+.projects-hero .overlay,
+.contact-hero .overlay {
+    max-width: 700px;
+    padding: 0 20px;
+}
